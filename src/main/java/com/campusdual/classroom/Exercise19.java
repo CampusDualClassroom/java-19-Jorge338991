@@ -1,7 +1,5 @@
 package com.campusdual.classroom;
 
-import java.lang.reflect.Array;
-
 public class Exercise19 {
 
     private static String getTridimensionalString(int[][][] intArrayTri, int[][] flatMatrix) {
@@ -14,18 +12,18 @@ public class Exercise19 {
             sb.append(stringTriMatrixRow(intArrayTri, i));
             sb.append("\n");
         }
-        sb.delete(sb.length()-1, sb.length());
+        sb.delete(sb.length() - 1, sb.length());
         return sb.toString();
 
     }
 
     private static String stringTriMatrixRow(int[][][] intArrayTri, int row) {
         StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < intArrayTri.length-1; i++){
+        for (int i = 0; i < intArrayTri.length - 1; i++) {
             sb.append(getUnidimensionalString(intArrayTri[i][row]));
             sb.append("   ");
         }
-        sb.append(getUnidimensionalString(intArrayTri[intArrayTri.length-1][row]));
+        sb.append(getUnidimensionalString(intArrayTri[intArrayTri.length - 1][row]));
 
         return sb.toString();
     }
@@ -41,8 +39,8 @@ public class Exercise19 {
 
     //TODO
     public static int[][] flatTridimensionalArray(int[][][] intArrayTri) {
-        int rowsArrayBi= intArrayTri[0].length;
-        int columnsArrayBi= intArrayTri[0][0].length;
+        int rowsArrayBi = intArrayTri[0].length;
+        int columnsArrayBi = intArrayTri[0][0].length;
         int[][] arrayResultante = new int[rowsArrayBi][columnsArrayBi];
 
         for (int i = 0; i < intArrayTri.length; i++) {
@@ -56,7 +54,6 @@ public class Exercise19 {
     }
 
 
-
     public static String getBidimensionalString(int[][] intArrayBi) {
         StringBuilder sb = new StringBuilder();
         sb.append("");
@@ -68,7 +65,7 @@ public class Exercise19 {
                     System.out.println("intArrayBi[" + i + "][" + j + "]=" + intArrayBi[i][j]);
                     break;
                 }
-                if((intArrayBi[i].length-1) == j){
+                if ((intArrayBi[i].length - 1) == j) {
                     sb.append(intArrayBi[i][j] + "\n");
                 } else {
                     sb.append(intArrayBi[i][j] + " ");
